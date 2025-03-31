@@ -918,16 +918,10 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                             }))
                           }
                         >
-                          <option value="creator">
-                            ElevenLabs Creator (100 mins)
-                          </option>
-                          <option value="pro">ElevenLabs Pro (500 mins)</option>
-                          <option value="scale">
-                            ElevenLabs Scale (2000 mins)
-                          </option>
-                          <option value="business">
-                            ElevenLabs Business (11000 mins)
-                          </option>
+                          <option value="creator">ElevenLabs Creator</option>
+                          <option value="pro">ElevenLabs Pro </option>
+                          <option value="scale">ElevenLabs Scale</option>
+                          <option value="business">ElevenLabs Business</option>
                         </select>
                       )}
                     </div>
