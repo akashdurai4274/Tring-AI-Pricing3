@@ -646,12 +646,12 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                 </div>
                 <div className="flex text-xs mt-1">
                   <div className="flex items-center mr-4 ">
-                    <div className="w-2  rounded-full bg-blue-600 mr-1"></div>
+                    <div className="w-2 h-2  rounded-full bg-blue-600 mr-1"></div>
                     <span>Tring AI</span>
                   </div>
                   {chatbotAddons.whatsapp && (
                     <div className="flex items-center">
-                      <div className="w-2  rounded-full bg-green-600 mr-1"></div>
+                      <div className="w-2 h-2 rounded-full bg-green-600 mr-1"></div>
                       <span>Meta</span>
                     </div>
                   )}
@@ -980,18 +980,18 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                 </div>
                 <div className="flex text-xs mt-1 flex-wrap">
                   <div className="flex items-center mr-4">
-                    <div className="w-2  rounded-full bg-blue-600 mr-1"></div>
+                    <div className="w-2 h-2 rounded-full bg-blue-600 mr-1"></div>
                     <span>Tring AI</span>
                   </div>
                   {voicebotAddons.cloudTelephony && (
                     <div className="flex items-center mr-4">
-                      <div className="w-2  rounded-full bg-blue-400 mr-1"></div>
+                      <div className="w-2  h-2 rounded-full bg-blue-400 mr-1"></div>
                       <span>{voicebotAddons.telephonyProvider || "Plivo"}</span>
                     </div>
                   )}
                   {voicebotAddons.customVoice && (
                     <div className="flex items-center">
-                      <div className="w-2  rounded-full bg-orange-500 mr-1"></div>
+                      <div className="w-2 h-2 rounded-full bg-orange-500 mr-1"></div>
                       <span>ElevenLabs</span>
                     </div>
                   )}
