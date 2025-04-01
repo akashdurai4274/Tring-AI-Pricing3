@@ -50,7 +50,7 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
     leadGeneration: true,
     whatsapp: true,
     crmIntegration: false,
-    noTringBranding: true,
+    noTringBranding: false,
   });
 
   // Voicebot addons
@@ -60,7 +60,7 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
     customVoicePlan: "pro",
     cloudTelephony: true,
     telephonyProvider: "plivo",
-    noTringBranding: true,
+    noTringBranding: false,
   });
 
   // Calculate chatbot pricing
