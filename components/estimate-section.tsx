@@ -109,11 +109,18 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
       usage = "highSuperIntelligence";
     }
 
+    let noBrandingCost = 0;
+
+    // Add this condition
+    if (chatbotAddons.noTringBranding) {
+      noBrandingCost = 1500;
+    }
+
     return {
       plan,
       basePrice,
-      extraCost: extraChatPrice + whatsappCost,
-      totalPrice: basePrice + extraChatPrice + whatsappCost,
+      extraCost: extraChatPrice + whatsappCost + noBrandingCost,
+      totalPrice: basePrice + extraChatPrice + whatsappCost + noBrandingCost,
       usage,
       tringAIPercentage: chatbotAddons.whatsapp
         ? Math.round((10 / 10.5) * 100)
@@ -732,7 +739,7 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                         {chatbotAddons.noTringBranding && (
                           <div className="flex justify-between">
                             <span>No Tring AI branding:</span>
-                            <span>{formatPrice(convertPrice(499))}</span>
+                            <span>{formatPrice(convertPrice(1500))}</span>
                           </div>
                         )}
 
