@@ -1214,7 +1214,8 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                 </h2>
                 <p className="text-sm  mb-4">Chatbot pricing + plus addons</p>
 
-                {chatbotPricing.usage === "highIntelligence" ? (
+                {chatbotPricing.usage === "highIntelligence" ||
+                chatbotPricing.usage === "highSuperIntelligence" ? (
                   <div className="bg-white text-yellow-400 text-xl font-bold p-3 rounded-md mb-6">
                     <p className="text-xs">Contact Sales</p>
                   </div>
