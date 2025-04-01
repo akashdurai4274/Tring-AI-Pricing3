@@ -266,7 +266,7 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
 
     // Determine usage level
     let usage = "normal";
-    if (minuteCount > 10000) {
+    if (minuteCount >= 10000) {
       usage = "high";
     }
 
@@ -393,7 +393,8 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
             {chatbotActive && (
               <span>
                 <h2>Chatbot</h2>
-                {chatbotPricing.usage === "highIntelligence" ? (
+                {chatbotPricing.usage === "highIntelligence" ||
+                chatbotPricing.usage === "highSuperIntelligence" ? (
                   <div className="mt-2 bg-white text-yellow-400 text-xl font-bold p-3 rounded-md mb-6">
                     <p className="text-xs">Contact Sales</p>
                   </div>
@@ -1313,10 +1314,22 @@ export default function EstimateSection({ activeTab }: { activeTab: string }) {
                 </div>
               </div>
               <div className="border-t border-white/20 pt-4 mt-4">
-                <div className=" text-center text-4xl font-bold mb-1">
+                {/* <div className=" text-center text-4xl font-bold mb-1">
                   {formatPrice(convertPrice(totalPrice))}{" "}
                   <span className="text-xl font-bold opacity-80">/month</span>
-                </div>
+                </div> */}
+                {chatbotPricing.usage === "highIntelligence" ||
+                chatbotPricing.usage === "highSuperIntelligence" ||
+                voicebotPricing.usage === "high" ? (
+                  <div className="bg-white text-yellow-400 text-xl font-bold p-3 rounded-md mb-2 text-center">
+                    <p className="text-sm">Contact Sales</p>
+                  </div>
+                ) : (
+                  <div className="text-center text-4xl font-bold mb-1">
+                    {formatPrice(convertPrice(totalPrice))}{" "}
+                    <span className="text-xl font-bold opacity-80">/month</span>
+                  </div>
+                )}
                 <p className="text-center text-xs opacity-80 mb-2">
                   does not include applicable taxes
                 </p>
